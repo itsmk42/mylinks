@@ -6,8 +6,11 @@
     <title>Artheon Energy | Business Links</title>
     <meta
       name="description"
-      content="Find Artheon Energy on Instagram, WhatsApp, Facebook, and Google Business from one simple page."
+      content="Find Artheon Energy on Instagram, WhatsApp, Facebook, Google Business, and JustDial from one simple page."
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
     <style>
       :root {
         color-scheme: light;
@@ -24,7 +27,7 @@
         --whatsapp: linear-gradient(135deg, #23b05b, #0f8d48);
         --facebook: linear-gradient(135deg, #1778f2, #0c53b7);
         --google: linear-gradient(135deg, #fbbc04, #ea4335, #4285f4, #34a853);
-        --payment: linear-gradient(135deg, #0f766e, #f59e0b);
+        --justdial: linear-gradient(135deg, #c2185b, #ff6f00);
       }
 
       * {
@@ -34,7 +37,7 @@
       body {
         margin: 0;
         min-height: 100vh;
-        font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+        font-family: "Inter", "Segoe UI", sans-serif;
         color: var(--text);
         background:
           radial-gradient(circle at top left, rgba(255, 255, 255, 0.85), transparent 30%),
@@ -86,9 +89,32 @@
         background: var(--surface);
         border: 1px solid rgba(255, 255, 255, 0.75);
         border-radius: 28px;
-        padding: 28px 22px 22px;
+        padding: 36px 26px 28px;
         box-shadow: var(--shadow);
         backdrop-filter: blur(18px);
+      }
+
+      .brand-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 6px;
+      }
+
+      .brand-avatar {
+        width: 72px;
+        height: 72px;
+        border-radius: 22px;
+        background: linear-gradient(135deg, #f6a04f, #e8820c);
+        display: grid;
+        place-items: center;
+        color: #fff;
+        font-weight: 800;
+        font-size: 1.7rem;
+        letter-spacing: -0.03em;
+        box-shadow: 0 12px 28px rgba(230, 130, 20, 0.3);
+        margin-bottom: 18px;
       }
 
       .eyebrow {
@@ -115,10 +141,11 @@
       }
 
       h1 {
-        margin: 18px 0 12px;
-        font-size: clamp(2.4rem, 7vw, 3.8rem);
-        line-height: 0.95;
-        letter-spacing: -0.05em;
+        margin: 14px 0 8px;
+        font-size: clamp(2.2rem, 6.5vw, 3.2rem);
+        font-weight: 800;
+        line-height: 1;
+        letter-spacing: -0.04em;
       }
 
       p {
@@ -129,7 +156,8 @@
       }
 
       .summary {
-        margin-top: 14px;
+        margin-top: 10px;
+        font-size: 0.95rem;
       }
 
       .links {
@@ -144,20 +172,28 @@
         align-items: center;
         gap: 16px;
         width: 100%;
-        border: 0;
+        border: 1.5px solid rgba(255, 255, 255, 0.5);
         border-radius: 22px;
         padding: 16px 18px;
         background: var(--surface-strong);
         color: inherit;
         text-decoration: none;
-        box-shadow: 0 18px 28px rgba(67, 48, 23, 0.08);
+        box-shadow: 0 4px 16px rgba(67, 48, 23, 0.06);
         transition:
           transform 180ms ease,
           box-shadow 180ms ease,
-          background 180ms ease;
+          background 180ms ease,
+          border-color 180ms ease;
         overflow: hidden;
         isolation: isolate;
       }
+
+      .google:hover, .google:focus-visible { border-color: rgba(66, 133, 244, 0.45); }
+      .website:hover, .website:focus-visible { border-color: rgba(29, 43, 100, 0.35); }
+      .instagram:hover, .instagram:focus-visible { border-color: rgba(221, 42, 123, 0.4); }
+      .whatsapp:hover, .whatsapp:focus-visible { border-color: rgba(35, 176, 91, 0.45); }
+      .facebook:hover, .facebook:focus-visible { border-color: rgba(23, 120, 242, 0.4); }
+      .justdial:hover, .justdial:focus-visible { border-color: rgba(255, 111, 0, 0.45); }
 
       .link-card::after {
         content: "";
@@ -211,6 +247,10 @@
         background: var(--google);
       }
 
+      .justdial .icon-wrap {
+        background: var(--justdial);
+      }
+
       .card-copy {
         min-width: 0;
         flex: 1 1 auto;
@@ -243,169 +283,13 @@
       }
 
       .footer-note {
-        margin-top: 22px;
-        font-size: 0.9rem;
+        margin-top: 24px;
+        font-size: 0.82rem;
         text-align: center;
+        color: var(--muted);
+        opacity: 0.7;
       }
 
-      .payment-section {
-        margin-top: 22px;
-        padding: 20px;
-        border-radius: 24px;
-        color: #fff6ea;
-        background:
-          radial-gradient(circle at top right, rgba(255, 214, 122, 0.2), transparent 28%),
-          linear-gradient(145deg, rgba(19, 55, 51, 0.98), rgba(16, 39, 36, 0.96));
-        box-shadow: 0 22px 38px rgba(28, 25, 20, 0.18);
-      }
-
-      .payment-top {
-        display: flex;
-        align-items: center;
-        gap: 14px;
-      }
-
-      .payment-icon {
-        width: 56px;
-        height: 56px;
-        border-radius: 18px;
-        display: grid;
-        place-items: center;
-        background: var(--payment);
-        color: #fff;
-        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
-        flex: 0 0 auto;
-      }
-
-      .payment-kicker {
-        display: block;
-        font-size: 0.78rem;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-        color: rgba(255, 227, 179, 0.82);
-      }
-
-      .payment-title {
-        margin: 4px 0 0;
-        font-size: 1.45rem;
-        line-height: 1.1;
-        color: #fffaf2;
-      }
-
-      .payment-description {
-        margin-top: 14px;
-        color: rgba(255, 241, 220, 0.82);
-      }
-
-      .payment-form {
-        margin-top: 18px;
-        display: grid;
-        gap: 12px;
-      }
-
-      .payment-grid {
-        display: grid;
-        gap: 12px;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .field {
-        display: grid;
-        gap: 7px;
-      }
-
-      .field-label {
-        font-size: 0.88rem;
-        color: rgba(255, 236, 206, 0.88);
-      }
-
-      .field input {
-        width: 100%;
-        border: 1px solid rgba(255, 255, 255, 0.14);
-        border-radius: 16px;
-        padding: 14px 15px;
-        font: inherit;
-        color: #fff;
-        background: rgba(255, 255, 255, 0.08);
-        outline: none;
-        transition:
-          border-color 180ms ease,
-          box-shadow 180ms ease,
-          background 180ms ease;
-      }
-
-      .field input::placeholder {
-        color: rgba(255, 255, 255, 0.52);
-      }
-
-      .field input:focus {
-        border-color: rgba(255, 214, 122, 0.82);
-        box-shadow: 0 0 0 3px rgba(255, 214, 122, 0.18);
-        background: rgba(255, 255, 255, 0.12);
-      }
-
-      .upi-id {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 12px;
-        padding: 14px 15px;
-        border-radius: 18px;
-        background: rgba(255, 255, 255, 0.08);
-        border: 1px solid rgba(255, 255, 255, 0.12);
-      }
-
-      .upi-id code {
-        font-size: 0.98rem;
-        color: #fff;
-        word-break: break-all;
-      }
-
-      .payment-actions {
-        display: grid;
-        gap: 12px;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .pay-button,
-      .copy-button {
-        width: 100%;
-        border: 0;
-        border-radius: 16px;
-        padding: 14px 16px;
-        font: inherit;
-        font-weight: 700;
-        cursor: pointer;
-        transition:
-          transform 180ms ease,
-          box-shadow 180ms ease,
-          opacity 180ms ease;
-      }
-
-      .pay-button {
-        color: #2d1c04;
-        background: linear-gradient(135deg, #ffd78d, #f59e0b);
-        box-shadow: 0 16px 28px rgba(245, 158, 11, 0.25);
-      }
-
-      .copy-button {
-        color: #fff6ea;
-        background: rgba(255, 255, 255, 0.08);
-        border: 1px solid rgba(255, 255, 255, 0.14);
-      }
-
-      .pay-button:hover,
-      .pay-button:focus-visible,
-      .copy-button:hover,
-      .copy-button:focus-visible {
-        transform: translateY(-2px);
-      }
-
-      .payment-status {
-        min-height: 1.4em;
-        font-size: 0.88rem;
-        color: rgba(255, 228, 187, 0.88);
-      }
 
       .fade-in {
         opacity: 0;
@@ -439,6 +323,10 @@
 
       .delay-7 {
         animation-delay: 720ms;
+      }
+
+      .delay-8 {
+        animation-delay: 820ms;
       }
 
       @keyframes reveal {
@@ -476,35 +364,25 @@
           border-radius: 16px;
         }
 
-        .payment-section {
-          padding: 18px;
-        }
-
-        .payment-grid,
-        .payment-actions {
-          grid-template-columns: 1fr;
-        }
-
-        .upi-id {
-          align-items: flex-start;
-          flex-direction: column;
-        }
       }
     </style>
   </head>
   <body>
     <main class="shell">
       <section class="panel">
-        <span class="eyebrow fade-in">Official Link Hub</span>
-        <h1 class="fade-in delay-1">Artheon Energy</h1>
-        <p class="summary fade-in delay-2">
-          Everything you need in one place. Tap below to visit our website or
-          connect with us on your preferred platform.
-        </p>
+        <div class="brand-header">
+          <div class="brand-avatar fade-in">AE</div>
+          <span class="eyebrow fade-in delay-1">Official Link Hub</span>
+          <h1 class="fade-in delay-2">Artheon Energy</h1>
+          <p class="summary fade-in delay-2">
+            Everything you need in one place. Tap below to visit our website,
+            connect with us, or leave a review.
+          </p>
+        </div>
 
         <div class="links">
           <a
-            class="link-card google fade-in delay-2"
+            class="link-card google fade-in delay-3"
             href="https://share.google/cOqvmYIklpWFNz6Af"
             target="_blank"
             rel="noopener noreferrer"
@@ -525,7 +403,7 @@
           </a>
 
           <a
-            class="link-card website fade-in delay-3"
+            class="link-card website fade-in delay-4"
             href="https://www.artheonenergy.com"
             target="_blank"
             rel="noopener noreferrer"
@@ -546,7 +424,7 @@
           </a>
 
           <a
-            class="link-card instagram fade-in delay-4"
+            class="link-card instagram fade-in delay-5"
             href="https://www.instagram.com/artheonenergy/?hl=en"
             target="_blank"
             rel="noopener noreferrer"
@@ -567,7 +445,7 @@
           </a>
 
           <a
-            class="link-card whatsapp fade-in delay-5"
+            class="link-card whatsapp fade-in delay-6"
             href="https://wa.me/919483654329"
             target="_blank"
             rel="noopener noreferrer"
@@ -588,7 +466,7 @@
           </a>
 
           <a
-            class="link-card facebook fade-in delay-6"
+            class="link-card facebook fade-in delay-7"
             href="https://www.facebook.com/profile.php?id=61587611690031"
             target="_blank"
             rel="noopener noreferrer"
@@ -607,133 +485,32 @@
             </span>
             <span class="arrow" aria-hidden="true">&rarr;</span>
           </a>
-        </div>
-
-        <section class="payment-section fade-in delay-6" aria-labelledby="payment-title">
-          <div class="payment-top">
-            <span class="payment-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor">
+          <a
+            class="link-card justdial fade-in delay-8"
+            href="https://www.justdial.com/Mangalore/Artheon-Energy-Opposite-V-Light-Decors-Mannagudda/0824PX824-X824-260404150111-V5D2_BZDET?trkid=&term=&ncatid=10039206&area=Bunder&search=Popular%20Battery%20Dealers%20Eveready%20in%20Bunder,%20Mangalore&mncatname=Battery%20Dealers-Eveready&ftterm=&csell=&oncatid=10039206&abd_btn=&abd_heading=&bd=1&cat_b2b_flag=0&searchfrom=lst&thumbnail="
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Review us on JustDial"
+          >
+            <span class="icon-wrap" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
                 <path
-                  d="M12 2a6.7 6.7 0 0 1 4.95 2.2.9.9 0 1 1-1.33 1.2A4.92 4.92 0 0 0 12 3.8a4.92 4.92 0 0 0-3.62 1.6.9.9 0 0 1-1.33-1.2A6.7 6.7 0 0 1 12 2Zm0 4.45a2.34 2.34 0 0 1 2.34 2.34c0 1.01-.64 1.93-1.54 2.82-.18.18-.47.18-.65 0-.9-.89-1.54-1.81-1.54-2.82A2.34 2.34 0 0 1 12 6.45Zm0 8.3a.9.9 0 0 1 .9.9v1.4h1.4a.9.9 0 0 1 0 1.8h-1.4v1.4a.9.9 0 0 1-1.8 0v-1.4H9.7a.9.9 0 0 1 0-1.8h1.4v-1.4a.9.9 0 0 1 .9-.9Zm7.25-1.27a.9.9 0 0 1 .9.9A8.15 8.15 0 0 1 12 22.53a8.15 8.15 0 0 1-8.15-8.15.9.9 0 1 1 1.8 0A6.35 6.35 0 0 0 12 20.73a6.35 6.35 0 0 0 6.35-6.35.9.9 0 0 1 .9-.9Z"
+                  d="M12 2l2.9 5.9 6.5.95-4.7 4.58 1.1 6.47L12 17.27 6.2 19.9l1.1-6.47L2.6 8.85l6.5-.95Z"
                 />
               </svg>
             </span>
-            <div>
-              <span class="payment-kicker">Pay Now</span>
-              <h2 class="payment-title" id="payment-title">Open your UPI app</h2>
-            </div>
-          </div>
+            <span class="card-copy">
+              <span class="card-label">Review on JustDial</span>
+              <span class="card-hint">Rate us and share your experience</span>
+            </span>
+            <span class="arrow" aria-hidden="true">&rarr;</span>
+          </a>
+        </div>
 
-          <p class="payment-description">
-            Enter an amount if you want, then tap Pay Now to continue in any
-            installed UPI payment app.
-          </p>
-
-          <form class="payment-form" id="payment-form">
-            <div class="payment-grid">
-              <label class="field">
-                <span class="field-label">Amount in INR (optional)</span>
-                <input
-                  id="payment-amount"
-                  name="amount"
-                  type="number"
-                  min="1"
-                  step="0.01"
-                  inputmode="decimal"
-                  placeholder="Enter amount"
-                />
-              </label>
-
-              <label class="field">
-                <span class="field-label">Payment note (optional)</span>
-                <input
-                  id="payment-note"
-                  name="note"
-                  type="text"
-                  maxlength="60"
-                  placeholder="Add a note"
-                />
-              </label>
-            </div>
-
-            <div class="upi-id">
-              <span class="field-label">UPI ID</span>
-              <code>bballery@ybl</code>
-            </div>
-
-            <div class="payment-actions">
-              <button class="pay-button" type="submit">Pay Now</button>
-              <button class="copy-button" type="button" id="copy-upi">
-                Copy UPI ID
-              </button>
-            </div>
-
-            <p class="payment-status" id="payment-status" aria-live="polite">
-              On mobile, Pay Now will open your installed UPI payment app.
-            </p>
-          </form>
-        </section>
-
-        <p class="footer-note fade-in delay-7">
-          One page. Six easy ways to connect and pay Artheon Energy.
+        <p class="footer-note fade-in delay-8">
+          One page. Every way to connect with Artheon Energy.
         </p>
       </section>
     </main>
-    <script>
-      const paymentForm = document.getElementById("payment-form");
-      const amountInput = document.getElementById("payment-amount");
-      const noteInput = document.getElementById("payment-note");
-      const copyUpiButton = document.getElementById("copy-upi");
-      const paymentStatus = document.getElementById("payment-status");
-      const upiId = "bballery@ybl";
-      const payeeName = "Artheon Energy";
-
-      function setPaymentStatus(message) {
-        paymentStatus.textContent = message;
-      }
-
-      function buildUpiLink() {
-        const params = new URLSearchParams({
-          pa: upiId,
-          pn: payeeName,
-          cu: "INR",
-        });
-        const amount = amountInput.value.trim();
-        const note = noteInput.value.trim();
-
-        if (amount) {
-          params.set("am", amount);
-        }
-
-        if (note) {
-          params.set("tn", note);
-        }
-
-        return "upi://pay?" + params.toString();
-      }
-
-      paymentForm.addEventListener("submit", function (event) {
-        event.preventDefault();
-        const amount = amountInput.value.trim();
-
-        if (amount && Number(amount) <= 0) {
-          setPaymentStatus("Enter a valid amount, or leave it blank.");
-          amountInput.focus();
-          return;
-        }
-
-        setPaymentStatus("Opening your UPI payment app...");
-        window.location.href = buildUpiLink();
-      });
-
-      copyUpiButton.addEventListener("click", async function () {
-        try {
-          await navigator.clipboard.writeText(upiId);
-          setPaymentStatus("UPI ID copied. Paste it into any UPI payment app.");
-        } catch (error) {
-          setPaymentStatus("UPI ID: " + upiId);
-        }
-      });
-    </script>
   </body>
 </html>
